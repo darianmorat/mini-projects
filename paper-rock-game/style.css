@@ -1,3 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+:root {
+   --main-font: rgb(0, 0, 0);
+   --main-hover: rgb(204, 0, 255);
+   --main-background: rgb(255, 224, 224);
+   --second-background: rgb(156, 69, 145);
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -6,23 +15,20 @@
 }
 
 body {
-   background-color: rgba(34, 0, 34, 0.733);
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   justify-content: center;
+   background-color: var(--main-background);
    height: 100vh;
+   overflow: hidden;
 }
 
 /* Turn Back */
 .back {
    position: absolute;
-   top: 0;
+   bottom: 0;
    left: 0;
-   margin: 50px;
+   margin: 40px;
    width: 130px;
    height: 50px;
-   background-color: grey;
+   background-color: var(--second-background);
    border: 0;
 }
 
@@ -33,47 +39,139 @@ body {
    width: 100%;
    height: 100%;
    text-decoration: none;
-   color: white;
    font-size: 20px;
-}
-
-.back-link:hover{
-   background-color: #4e4e4e;
    border: solid black 3px;
 }
 
-/* INFORMATION */
-.info {
-   width: 400px;
-   background-color: antiquewhite;
-   padding: 30px;
-   border-radius: 20px 20px 0px 0px;
+.back-link:hover {
+   background-color: #4e4e4e;
+   border: solid rgb(255, 255, 255) 3px;
+   color: white;
 }
 
-h1 > .result {
+.back-link,
+.title {
+   color: rgb(0, 0, 0);
+}
+
+/* Nigh Mode */
+.night-mode {
+   width: 70px;
+   height: 70px;
+   background-color: var(--second-background);
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   margin: 30px;
+}
+
+/* TITLE */
+.title {
+   font-family: 'Minecraft';
+   background-color: var(--second-background);
+   padding: 30px;
+   padding-bottom: 40px;
+   width: 100vw;
+   text-align: center;
+   border-bottom: solid black 3px;
+   font-size: 45px;
+   font-weight: 100;
+}
+
+/* INFORMATION */
+.information {
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.container-result {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   padding: 15px;
+   width: 100%;
+   margin-bottom: 80px;
+}
+
+.container-result > h1 {
    color: red;
+   font-size: 40px;
+   text-align: center;
+   display: block;
+   margin-bottom: 10px;
+}
+
+.result-description {
+   font-size: 20px;
+   font-weight: bold;
+}
+
+#computer-selection,
+#user-selection {
+   flex: 1;
+   text-align: center;
+}
+
+.user-animation-false{
+   transition: 0.3s ease;
+}
+.user-animation {
+   transform: translateY(-30px);
+
+}
+
+.computer-animation-false{
+   transition: 0.3s ease;
+}
+.computer-animation {
+   transform: translateY(-30px);
+
 }
 
 /* SELECTION */
 .selection {
    display: flex;
-   justify-content: space-between;
-   min-height: 100px;
-   width: 400px;
-   background-color: aliceblue;
+   justify-content: space-evenly;
    padding: 30px;
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 40px;
+   max-width: 900px;
+   margin: 0 auto;
+   margin-top: 40px;
 }
 
 .selection > button {
-   width: 90px;
-   min-height: 40px;
+   width: 180px;
+   height: 180px;
 }
 
-.reset {
-   background-color: green;
-   color: white;
-   min-width: 100%;
-   margin: 0 auto;
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   background-color: rgb(36, 36, 36);
+   border: 0;
+   font-size: 90px;
+   padding-bottom: 10px;
+   transition: ease 0.5s;
+}
+
+#Paper {
+   transform: rotate(90deg);
+}
+
+.button:hover {
+   border-left: solid var(--main-hover) 15px;
+   transform: translate(0, -10px);
+   transform: rotate(-90deg);
+}
+
+.button#Paper:hover {
+   transform: rotate(0deg);
+   border-left: 0;
+   border-bottom: solid var(--main-hover) 15px;
 }
