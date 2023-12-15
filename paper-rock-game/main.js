@@ -6,10 +6,23 @@ const resultDescription = document.querySelector('.result-description');
 const userAnimation = document.querySelector('.user-animation-false');
 const computerAnimation = document.querySelector('.computer-animation-false');
 
-// Change to modern design
+// Change  design
+
+// Add ask name option
+// e.g.
 // const userName = document.querySelector('#user-selection');
 // const askName = prompt('what is your name?: ');
 // userName.innerHTML = askName + ': ';
+
+// Add a dark mode option
+// Add restart game button at the end
+// remove the default and computer options and add the button or, think if is better to show a popup
+
+// Try to show different messages, not always the same ones, so create 2-3 msgs that can be randomly alternate
+
+// HARD THINGS TO IMPLEMENT
+// make the game of 3 levels. If win 3 games in streak u can change something
+// profile section
 
 let playUser;
 let playComputer;
@@ -42,7 +55,7 @@ function computerChoice() {
 
 function results() {
    if (playUser === playComputer) {
-      getResult = 'It\'s a tie';
+      getResult = "It's a tie";
       resultDescription.innerHTML = 'COME ON!, are u gonna lose against a computer?';
    } else if (playUser === 'Rock' && playComputer === 'Paper') {
       getResult = 'You lost!';
@@ -71,6 +84,7 @@ function points() {
    if (getResult === 'You won!') {
       userCount++;
       userSelection.innerHTML = userCount;
+
       // animation
       userAnimation.classList.add('user-animation');
       setTimeout(() => {
@@ -82,6 +96,7 @@ function points() {
    else if (getResult === 'You lost!') {
       computerCount++;
       computerSelection.innerHTML = computerCount;
+
       // animation
       computerAnimation.classList.add('computer-animation');
       setTimeout(() => {
@@ -104,18 +119,18 @@ function points() {
 function winner() {
    if (userCount === 5) {
       result.innerHTML = 'YOU WON THE GAME!';
-      resultDescription.innerHTML = 'Congratulations';
-      reset();
+      resultDescription.innerHTML = 'Congratulations!';
+      resetGame();
    } else if (computerCount === 5) {
-      result.innerHTML = 'YOU LOSE THE GAME!... LOSER';
-      resultDescription.innerHTML = '---';
-      reset();
+      result.innerHTML = 'YOU LOSE THE GAME!';
+      resultDescription.innerHTML = 'You should find a better job';
+      resetGame();
    }
-}
 
-function reset() {
-   userCount = 1;
-   computerCount = 1;
-   userSelection.innerHTML = 0;
-   computerSelection.innerHTML = 0;
+   function resetGame() {
+      userCount = 1;
+      computerCount = 1;
+      userSelection.innerHTML = 0;
+      computerSelection.innerHTML = 0;
+   }
 }
