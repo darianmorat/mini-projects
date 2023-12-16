@@ -68,7 +68,7 @@ function results() {
       resultDescription.innerHTML = 'Paper beats rock';
    } else if (playUser === 'Paper' && playComputer === 'Scissors') {
       getResult = 'You lost!';
-      resultDescription.innerHTML = 'Scissors beats rock';
+      resultDescription.innerHTML = 'Scissors beats paper';
    } else if (playUser === 'Scissors' && playComputer === 'Rock') {
       getResult = 'You lost!';
       resultDescription.innerHTML = 'Rock beats scissors';
