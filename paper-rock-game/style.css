@@ -101,7 +101,7 @@ body {
    margin-bottom: 80px;
 }
 
-.container-result > h1 {
+.result {
    color: red;
    font-size: 40px;
    text-align: center;
@@ -179,18 +179,29 @@ body {
    border-bottom: solid var(--main-hover) 15px;
 }
 
+/* MEDIA QUERIES */
 @media (width < 700px) {
    .back-link {
       font-size: 15px;
    }
+
+   /* INFORMATION */
    .title {
       font-size: 30px;
       padding: 20px;
       padding-bottom: 25px;
    }
+
+   .result {
+      font-size: 35px;
+      word-spacing: -8px;
+   }
+
    .result-description {
       font-size: 18px;
+      height: 44px;
    }
+
    #user-selection,
    #computer-selection,
    .user-selection,
@@ -202,7 +213,7 @@ body {
       margin-bottom: 30px;
    }
 
-   /* Selection */
+   /* SELECTION */
    .selection {
       display: flex;
       justify-content: space-evenly;
@@ -213,12 +224,12 @@ body {
    }
 
    .selection > button {
-      width: 130px;
-      height: 130px;
+      width: 110px;
+      height: 110px;
    }
 
    .button {
-      font-size: 65px;
+      font-size: 60px;
    }
 
    /* Options container */
