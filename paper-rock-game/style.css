@@ -17,7 +17,7 @@
 body {
    background-color: var(--main-background);
    height: 100vh;
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 
 /* Turn Back */
@@ -63,6 +63,11 @@ body {
    bottom: 0;
    right: 0;
    margin: 30px;
+   font-size: 40px;
+   display: flex;
+   justify-content: center;
+   padding-top: 5px;
+   border-radius: 50%;
 }
 
 /* TITLE */
@@ -115,20 +120,18 @@ body {
    text-align: center;
 }
 
-.user-animation-false{
+.user-animation-false {
    transition: 0.3s ease;
 }
 .user-animation {
    transform: translateY(-30px);
-
 }
 
-.computer-animation-false{
+.computer-animation-false {
    transition: 0.3s ease;
 }
 .computer-animation {
    transform: translateY(-30px);
-
 }
 
 /* SELECTION */
@@ -174,4 +177,87 @@ body {
    transform: rotate(0deg);
    border-left: 0;
    border-bottom: solid var(--main-hover) 15px;
+}
+
+@media (width < 700px) {
+   .back-link {
+      font-size: 15px;
+   }
+   .title {
+      font-size: 30px;
+      padding: 20px;
+      padding-bottom: 25px;
+   }
+   .result-description {
+      font-size: 18px;
+   }
+   #user-selection,
+   #computer-selection,
+   .user-selection,
+   .computer-selection {
+      font-size: 22px;
+   }
+
+   .container-result {
+      margin-bottom: 30px;
+   }
+
+   /* Selection */
+   .selection {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 30px;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 10px;
+   }
+
+   .selection > button {
+      width: 130px;
+      height: 130px;
+   }
+
+   .button {
+      font-size: 65px;
+   }
+
+   /* Options container */
+   .options-container {
+      display: flex;
+   }
+
+   /* Turn back */
+   .back {
+      position: initial;
+      flex: 1;
+      margin: 0;
+      border-right: solid black 3px;
+   }
+
+   .back-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      border: 0;
+      color: white;
+   }
+
+   .back,
+   .night-mode {
+      height: 55px;
+      border-bottom: solid black 3px;
+   }
+
+   /* Night Mode */
+   .night-mode {
+      position: initial;
+      flex: 1;
+      margin: 0;
+      font-size: 30px;
+      padding-top: 0;
+      border-radius: 0;
+   }
 }
