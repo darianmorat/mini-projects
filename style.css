@@ -28,10 +28,19 @@ body {
    width: 100%;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    grid-auto-rows: 200px;
+   font-size: 18px;
 }
 
 .container > div {
    background-color: rgb(53, 79, 134);
+   transition: ease-in 80ms;
+}
+
+.container > div:hover {
+   transform: translate(-10px, -10px);
+   box-shadow: black 10px 10px;
+   background-color: rgb(43, 124, 172);
+   cursor: pointer;
 }
 
 div > a {
@@ -42,12 +51,6 @@ div > a {
    height: 100%;
    text-decoration: none;
    color: white;
-}
-
-div > a:hover {
-   background-color: rgb(31, 46, 78);
-   cursor: pointer;
-   /* add animations to the boxes */
 }
 
 /* Footer */
