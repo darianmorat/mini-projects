@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ETCH SKETCH</title>
-</head>
-<body>
-   <h1 class="title">ETCH SKETCH</h1>
-   <div class="container">
-      <div class="board"></div>
-      <div class="controls">
-         <button class="black">Black</button>
-         <button class="white">White</button>
-         <button class="rainbow">Rainbow</button>
-         <button class="reset">Reset</button>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ETCH SKETCH</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <h1 class="title">ETCH SKETCH</h1>
+      <div class="container">
+         <div class="board"></div>
+         <div class="controls">
+            <button class="black">Black</button>
+            <button class="white">White</button>
+            <button class="rainbow">Rainbow</button>
+            <button class="reset">Reset</button>
+         </div>
+         <div class="size-board">
+            <input type="text" placeholder="Size of board" value="16" />
+            <button class="set-size">Set size</button>
+         </div>
       </div>
-      <div class="size-board">
-         <input type="text" placeholder="Size of board" value="16">
-         <button class="set-size">Set size</button>
-      </div>
-   </div>
-</body>
+      <script src="main.js"></script>
+   </body>
 </html>
