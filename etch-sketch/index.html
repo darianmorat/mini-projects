@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>ETCH SKETCH</title>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style.css" />
    </head>
    <body>
       <h1 class="title">ETCH SKETCH</h1>
@@ -17,7 +17,7 @@
             <button class="reset">Reset</button>
          </div>
          <div class="size-board">
-            <input type="text" placeholder="Size of board" value="16" />
+            <input type="text" placeholder="Size of board" onchange="changeSize(this.value)" />
             <button class="set-size">Set size</button>
          </div>
       </div>

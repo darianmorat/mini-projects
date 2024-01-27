@@ -1,12 +1,19 @@
 * {
    margin: 0;
    padding: 0;
-   /* box-sizing: border-box; */
+   box-sizing: border-box;
+}
+
+body {
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .board {
    width: 500px;
    height: 500px;
    display: grid;
-   border: solid black 5px;
+   border: solid #b6b6b66b 5px;
 }
