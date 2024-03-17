@@ -6,8 +6,8 @@ const resultDescription = document.querySelector('.result-description');
 const userAnimation = document.querySelector('.user-animation-false');
 const computerAnimation = document.querySelector('.computer-animation-false');
 
-// resolve small bug: when u finish the game, and u win again it show that your point is 2 when in reality should be 1
-// whoever is winning put the text with a underline green 
+// resolve small bug: when u finish the game, and u win again it show that your point is 2 when in
+// reality should be 1 whoever - is winning put the text with a underline green
 
 // Change  design
 
@@ -59,7 +59,8 @@ function computerChoice() {
 function results() {
    if (playUser === playComputer) {
       getResult = "It's a tie";
-      resultDescription.innerHTML = 'COME ON!, are u gonna lose against a computer?';
+      resultDescription.innerHTML =
+         'COME ON!, are u gonna lose against a computer?';
    } else if (playUser === 'Rock' && playComputer === 'Paper') {
       getResult = 'You lost!';
       resultDescription.innerHTML = 'Paper beats rock';

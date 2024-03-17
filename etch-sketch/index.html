@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>ETCH SKETCH</title>
-      <link rel="stylesheet" href="style.css" />
-   </head>
-   <body>
-      <h1 class="title">ETCH SKETCH</h1>
-      <div class="container">
-         <div class="board"></div>
-         <div class="controls">
-            <button class="black">Black</button>
-            <button class="white">White</button>
-            <button class="rainbow">Rainbow</button>
-            <button class="reset">Reset</button>
-         </div>
-         <div class="size-board">
-            <input type="text" placeholder="Size of board" onchange="changeSize(this.value)" />
-            <button class="set-size">Set size</button>
-         </div>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>ETCH SKETCH</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <h1 class="title">ETCH SKETCH</h1>
+   <div class="container">
+      <div class="board"></div>
+      <div class="controls">
+         <button class="black">Black</button>
+         <button class="white">White</button>
+         <button class="rainbow">Rainbow</button>
+         <button class="reset">Reset</button>
       </div>
-      <script src="main.js"></script>
-   </body>
+      <!-- <input id="colorPicker" type="color" value="#333333" /> -->
+
+      <div class="size-board">
+         <input class="user-input" type="text" placeholder="Size of board" value="16"
+            onchange="changeSize(this.value)" />
+         <!-- value not helpful -->
+         <button class="set-size">Set size</button>
+      </div>
+   </div>
+   <script src="main.js"></script>
+</body>
+
 </html>

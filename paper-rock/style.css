@@ -123,6 +123,7 @@ body {
 .user-animation-false {
    transition: 0.3s ease;
 }
+
 .user-animation {
    transform: translateY(-30px);
 }
@@ -130,6 +131,7 @@ body {
 .computer-animation-false {
    transition: 0.3s ease;
 }
+
 .computer-animation {
    transform: translateY(-30px);
 }
@@ -146,7 +148,7 @@ body {
    margin-top: 40px;
 }
 
-.selection > button {
+.selection>button {
    width: 180px;
    height: 180px;
 }
@@ -223,7 +225,7 @@ body {
       margin-top: 10px;
    }
 
-   .selection > button {
+   .selection>button {
       width: 110px;
       height: 110px;
    }
